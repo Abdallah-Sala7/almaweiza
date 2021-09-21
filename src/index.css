@@ -1,0 +1,56 @@
+body {
+  direction: rtl;
+}
+a.active:before{
+  width:100% ;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+header ul.active{  transform: translateX(0%);}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section{
+  padding: 90px 15px 0;
+}
+section h3,
+footer h3{
+  font-size: 30px;
+  text-align: center;
+  color: #43a047;
+  margin-bottom: 50px;
+  position: relative;
+}
+section h3::after, 
+section h3::before,
+footer h3:before,
+footer h3::after {
+  content: "";
+  position: absolute;
+  background-color: #43a047;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section h3::before,
+footer h3:before {
+  width: 100px;
+  bottom: 0px;
+}
+section h3::after,
+footer h3::after{
+  width: 50px;
+  bottom: -10px;
+}
+
+@keyframes spin{
+  form{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
